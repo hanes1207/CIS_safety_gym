@@ -1277,6 +1277,7 @@ class Engine(gym.Env, gym.utils.EzPickle):
             # Goal processing
             if self.goal_met():
                 info['goal_met'] = True
+                print("GOAL!")
                 reward += self.reward_goal
                 if self.continue_goal:
                     # Update the internal layout so we can correctly resample (given objects have moved)
